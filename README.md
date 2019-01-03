@@ -8,11 +8,13 @@ by Alan Levine http://cogdog.info/ or http://cogdogblog.com/
 
 ----- 
 
-A slight tweak to the [Font Awesome 4 Menus plugin](https://wordpress.org/plugins/font-awesome-4-menus/) updated work with Font Awesome 5.
-
-
+A slight tweak to the [Font Awesome 4 Menus plugin](https://wordpress.org/plugins/font-awesome-4-menus/) updated work with Font Awesome 5 used in my [Calling Card WordPress themes](https://cogdog.github.io/#wpcards).
 
 This is a first cut test to see if the thing even works... documentation just may follow. Below are some mods of the original plugin readme.
+
+See it in action:
+
+* http://lab.cogdogblog.com/dimension/
 
 ## Description
 
@@ -30,11 +32,11 @@ Then, activate the plugin through the 'Plugins' menu in WordPress. Look for a me
 
 ## Frequently Asked Questions
 
-### Where can I find all of the available icons? =
+### Where can I find all of the available icons?
 
 Head over to [the Font Awesome website](https://fontawesome.com/icons "the Font Awesome website") to find a full list of icons available. The plugin works with all free icons.
 
-= How to I add an icon to my menu? =
+### How to I add an icon to my menu? 
 
 Go to **Appearance** -> **Menus**, select which menu item to which you want to add the icon, and add the icon class(es) under 'CSS Classes (optional)'. (eg, to add the [home icon](https://fontawesome.com/icons/home?style=solid) to your 'Home' link, enter "fas fa-home" (without quotes) as a class. To make it spin, add "fas fa-home fa-spin" as your classes.) Save your menu and voila!
 
