@@ -70,8 +70,9 @@ YMMV
 
 ## Updates
 
-5.0 - the very first attempt to get this to work, just tweaked the original plugin slightly.
-5.01 - adjusted to fix `fa` shortcode and verify the `fa-stack` one works.
+* 5.01 - adjusted to fix `fa` shortcode and verify the `fa-stack` one works.
+* 5.0 - the very first attempt to get this to work, just tweaked the original plugin slightly.
+
 .
 
 
