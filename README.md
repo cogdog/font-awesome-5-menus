@@ -53,7 +53,7 @@ You can include the [size](https://fontawesome.com/how-to-use/on-the-web/styling
 
 which the plugin renders as:
 
-![Example shortcode displayed](shortcode-fa.jpg "Example shortcode displayed")
+![Example shortcode displayed](images/shortcode-fa.jpg "Example shortcode displayed")
 
 There is also a `[fa-stack]` shortcode for rendering [stacked icons](https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons). This format requires opening and closing shortcode tags, and inside you will enter separate `[fa]` shortcodes for the icons- e.g. for 2 icons stacked (note wrapping one in a span tag to color it, if anyone really uses this I could add a wrapping style option)):
 
@@ -64,7 +64,7 @@ There is also a `[fa-stack]` shortcode for rendering [stacked icons](https://fon
  
 which produces
 
-![Example stack shortcode of red circle around a camera displayed](shortcode-stack.jpg "Example stack shortcode of red circle around a camera displayed")   
+![Example stack shortcode of red circle around a camera displayed](images/shortcode-stack.jpg "Example stack shortcode of red circle around a camera displayed")   
 
 YMMV
 
