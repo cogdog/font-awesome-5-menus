@@ -3,7 +3,7 @@
 Plugin Name: Font Awesome 5 Menus
 Plugin URI: https://github.com/cogdog/font-awesome-5-menus
 Description: Easily add Font Awesome 5.0 icons to your WordPress menus and anywhere else on your site! This is a tweak to original version 4.7.0 plugin by New Nine Media
-Version: 5.0
+Version: 5.01
 Author: CogDog
 Author URI: https://cog.dog/
 License: GPLv2 or later
@@ -32,7 +32,7 @@ class FontAwesomeFive {
         'fa5_location' => 'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
         'spacing' => 1,
         'stylesheet' => 'local',
-        'version' => '5.0'
+        'version' => '5.01'
     );
 
     function __construct(){
@@ -168,9 +168,6 @@ class FontAwesomeFive {
         ), $atts );
         if( !empty( $a[ 'class' ] ) ){
             $class_array = explode( ' ', $a[ 'class' ] );
-            if( !in_array( 'fa', $class_array ) ){
-                $class_array[] = 'fa';
-            }
             return '<i class="' . implode( ' ', $class_array ) . '"></i>';
         }
     }

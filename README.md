@@ -40,9 +40,38 @@ Head over to [the Font Awesome website](https://fontawesome.com/icons "the Font 
 
 Go to **Appearance** -> **Menus**, select which menu item to which you want to add the icon, and add the icon class(es) under 'CSS Classes (optional)'. (eg, to add the [home icon](https://fontawesome.com/icons/home?style=solid) to your 'Home' link, enter "fas fa-home" (without quotes) as a class. To make it spin, add "fas fa-home fa-spin" as your classes.) Save your menu and voila!
 
+### How do I use the shortcodes?
+
+It took some digging to check that these work (the original plugin had no explanation of the stacking shortcode).
+
+Use `[fa class="fab fa-twitter"]` to create a twitter icon. Of course, if you are doing this, why not go to the HTMl editor and just enter `&lt;i class="fab fa-twitter"&gt;&lt;/i&gt;` but hey. 
+
+You can include the [size](https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons) and [rotation](https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons) classes as well. Here I entered in my WordPress editor:
+
+     I got my [fa class="fas fa-apple-alt fa-5x"] 
+     and then I went [fa class="fab fa-twitter fa-rotate-270 fa-5x"]
+
+which the plugin renders as:
+
+![Example shortcode displayed](shortcode-fa.jpg "Example shortcode displayed")
+
+There is also a `[fa-stack]` shortcode for rendering [stacked icons](https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons). This format requires opening and closing shortcode tags, and inside you will enter separate `[fa]` shortcodes for the icons- e.g. for 2 icons stacked (note wrapping one in a span tag to color it, if anyone really uses this I could add a wrapping style option)):
+
+     [fa-stack class="fa-2x"]
+       [fa class="fas fa-camera fa-stack-1x"]
+       <span style="color:Tomato">[fa class="fas fa-ban fa-stack-2x"]</span>
+     [/fa-stack]
+ 
+which produces
+
+![Example stack shortcode of red circle around a camera displayed](shortcode-stack.jpg "Example stack shortcode of red circle around a camera displayed")   
+
+YMMV
+
 ## Updates
 
 5.0 - the very first attempt to get this to work, just tweaked the original plugin slightly.
+5.01 - adjusted to fix `fa` shortcode and verify the `fa-stack` one works.
 .
 
 
