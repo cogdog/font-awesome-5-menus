@@ -127,7 +127,7 @@ class FontAwesomeFive {
 
     function nav_menu_css_class( $classes ){
         if( is_array( $classes ) ){
-            $tmp_classes = preg_grep( '/^(fa)(-\S+)?$/i', $classes );
+            $tmp_classes = preg_grep( '/^(fa|fas|far|fal|fad|fab)(-\S+)?$/i', $classes );
             if( !empty( $tmp_classes ) ){
                 $classes = array_values( array_diff( $classes, $tmp_classes ) );
             }
@@ -175,7 +175,7 @@ class FontAwesomeFive {
     
     function walker_nav_menu_start_el( $item_output, $item, $depth, $args ){
         if( is_array( $item->classes ) ){
-            $classes = preg_grep( '/^(fa)(-\S+)?$/i', $item->classes );
+            $classes = preg_grep( '/^(fa|fas|far|fal|fad|fab)(-\S+)?$/i', $item->classes );
             if( !empty( $classes ) ){
                 $item_output = $this->replace_item( $item_output, $classes );
             }
