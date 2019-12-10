@@ -3,7 +3,7 @@
 Plugin Name: Font Awesome 5 Menus
 Plugin URI: https://github.com/cogdog/font-awesome-5-menus
 Description: Easily add Font Awesome 5.0 icons to your WordPress menus and anywhere else on your site! This is a tweak to original version 4.7.0 plugin by New Nine Media
-Version: 5.01
+Version: 5.1
 Author: CogDog
 Author URI: https://cog.dog/
 License: GPLv2 or later
@@ -29,10 +29,10 @@ License: GPLv2 or later
 class FontAwesomeFive {
 
     public static $defaults = array(
-        'fa5_location' => 'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
+        'fa5_location' => 'https://use.fontawesome.com/releases/v5.11.2/css/all.css',
         'spacing' => 1,
         'stylesheet' => 'local',
-        'version' => '5.01'
+        'version' => '5.1'
     );
 
     function __construct(){
@@ -44,9 +44,13 @@ class FontAwesomeFive {
 
         add_filter( 'nav_menu_css_class', array( $this, 'nav_menu_css_class' ) );
         add_filter( 'walker_nav_menu_start_el', array( $this, 'walker_nav_menu_start_el' ), 10, 4 );
+        
+        $plugin = plugin_basename(__FILE__); 
+        add_filter( "plugin_action_links_$plugin", array( $this, 'fa5menu_settings_link') );
 
         add_shortcode( 'fa', array( $this, 'shortcode_icon' ) );
-        add_shortcode( 'fa-stack', array( $this, 'shortcode_stack' ) );
+        add_shortcode( 'fa-stack', array( $this, 'shortcode_stack' ) );        
+        
     }
 
     function admin_enqueue_scripts( $hook ){
@@ -56,9 +60,16 @@ class FontAwesomeFive {
     }
 
     function admin_menu(){
-        add_submenu_page( 'options-general.php', 'Font Awesome 5 Menus', 'Font Awesome', 'edit_theme_options', 'n9m-font-awesome-5-menus', array( $this, 'admin_menu_cb' ) );
+        add_submenu_page( 'options-general.php', 'Font Awesome 5 Menus', 'Font Awesome 5 Menus', 'edit_theme_options', 'n9m-font-awesome-5-menus', array( $this, 'admin_menu_cb' ) );
     }
-
+    
+	function fa5menu_settings_link( $links ) {
+		// add settings link		
+    	$settings_link = '<a href="options-general.php?page=n9m-font-awesome-5-menus">' . __( 'Settings' ) . '</a>';
+    	array_push( $links, $settings_link );
+    	return $links;		
+	}  
+	
     function admin_menu_cb(){
         if( $_POST && check_admin_referer( 'n9m-fa' ) ){
             $settings = array();
@@ -162,32 +173,6 @@ class FontAwesomeFive {
         return $item_output;
     }
     
-    function shortcode_icon( $atts ){
-        $a = shortcode_atts( array(
-            'class' => ''
-        ), $atts );
-        if( !empty( $a[ 'class' ] ) ){
-            $class_array = explode( ' ', $a[ 'class' ] );
-            return '<i class="' . implode( ' ', $class_array ) . '"></i>';
-        }
-    }
-    
-    function shortcode_stack( $atts, $content = null ){
-        $a = shortcode_atts( array(
-            'class' => ''
-        ), $atts );
-        $class_array = array();
-        if( empty( $a[ 'class' ] ) ){
-            $class_array = array( 'fa-stack' );
-        } else {
-            $class_array = explode( ' ', $a[ 'class' ] );
-            if( !in_array( 'fa-stack', $class_array ) ){
-                $class_array[] = 'fa-stack';
-            }
-        }
-        return '<span class="' . implode( ' ', $class_array ) . '">' . do_shortcode( $content ) . '</span>';
-    }
-
     function walker_nav_menu_start_el( $item_output, $item, $depth, $args ){
         if( is_array( $item->classes ) ){
             $classes = preg_grep( '/^(fa)(-\S+)?$/i', $item->classes );
@@ -218,6 +203,33 @@ class FontAwesomeFive {
         }
     }
 
+
+    function shortcode_icon( $atts ){
+        $a = shortcode_atts( array(
+            'class' => ''
+        ), $atts );
+        if( !empty( $a[ 'class' ] ) ){
+            $class_array = explode( ' ', $a[ 'class' ] );
+            return '<i class="' . implode( ' ', $class_array ) . '"></i>';
+        }
+    }
+    
+    function shortcode_stack( $atts, $content = null ){
+        $a = shortcode_atts( array(
+            'class' => ''
+        ), $atts );
+        $class_array = array();
+        if( empty( $a[ 'class' ] ) ){
+            $class_array = array( 'fa-stack' );
+        } else {
+            $class_array = explode( ' ', $a[ 'class' ] );
+            if( !in_array( 'fa-stack', $class_array ) ){
+                $class_array[] = 'fa-stack';
+            }
+        }
+        return '<span class="' . implode( ' ', $class_array ) . '">' . do_shortcode( $content ) . '</span>';
+    }
+    
     public static function write_log( $log ){
         if( is_array( $log ) || is_object( $log ) ){
             error_log( print_r( $log, true ) );

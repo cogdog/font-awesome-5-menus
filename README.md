@@ -1,5 +1,5 @@
 # Font Awesome 5 For Menus
-by Alan Levine http://cogdog.info/ or http://cogdogblog.com/
+by Alan Levine https://cog.dog/
 
 -----
 *If this kind of stuff has any value to you, please consider supporting me so I can do more!*
@@ -15,6 +15,7 @@ This is a first cut test to see if the thing even works... documentation just ma
 See it in action:
 
 * http://lab.cogdogblog.com/dimension/
+* https://cog.dog
 
 ## Description
 
@@ -70,6 +71,7 @@ YMMV
 
 ## Updates
 
+* 5.1 - added plugin links to settings, and renamed the menu name to not be confused with the official Font Awesome plugin
 * 5.01 - adjusted to fix `fa` shortcode and verify the `fa-stack` one works.
 * 5.0 - the very first attempt to get this to work, just tweaked the original plugin slightly.
 
