@@ -1,23 +1,17 @@
-# Font Awesome 5 For Menus
-by Alan Levine https://cog.dog/
+=== Font Awesome 5 For Menus ===
+Contributors: cogdog, new-nine
+Donate link: https://patreon.com/cogdog
+Tags: menu, icon, fontawesome
+Requires at least: 4.0
+Tested up to: 5.3
+Stable tag: 4.3
+Requires PHP: 5.2.4
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
------
-*If this kind of stuff has any value to you, please consider supporting me so I can do more!*
+Easily create WordPress menus that use Font Awesome 5 icons.
 
-[![Support me on Patreon](http://cogdog.github.io/images/badge-patreon.png)](https://patreon.com/cogdog) [![Support me on via PayPal](http://cogdog.github.io/images/badge-paypal.png)](https://paypal.me/cogdog)
-
------ 
-
-A slight tweak to the [Font Awesome 4 Menus plugin](https://wordpress.org/plugins/font-awesome-4-menus/) updated to work with Font Awesome 5 used in my [Calling Card WordPress themes](https://cogdog.github.io/#wpcards).
-
-Below are some mods of the original plugin readme.
-
-See it in action:
-
-* http://lab.cogdogblog.com/dimension/
-* https://cog.dog
-
-## Description
+== Description ==
 
 This is an update to the [Font Awesome 4 Menus plugin by New Nine Media](https://wordpress.org/plugins/font-awesome-4-menus/) updated to work with Font Awesome 5 (their plugin has not been updated).
 
@@ -29,23 +23,23 @@ In Font Awesome 5 Menus, you also have ability to add multiple Font Awesome clas
 
 In addition, you can use shortcodes to add icons to your posts and pages, as well as shortcodes to take advantage of the new stacked feature of Font Awesome 5.
 
-## Installation
+== Installation ==
 
-Download this repository as a .zip file then upload it as a plugin in your WordPress dashboard. 
+1. Upload the plugin files to the `/wp-content/plugins/font-awesome-5-menus` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through the 'Plugins' screen in WordPress
+3. Use the Settings->Font Awesome 5 Menus screen to configure the plugin.
 
-Then, activate the plugin through the 'Plugins' menu in WordPress. Look for a menu item under the **Settings** menu.
+== Frequently Asked Questions ==
 
-## Frequently Asked Questions
-
-### Why not use the Official Font Awesome Plugin
+= Why not use the Official Font Awesome Plugin =
 
 It's great! I use it often. This one merely makes it possibly to create a WordPress menu of icons only by using CSS class names. There are no conflicts.
 
-### Where can I find all of the available icons?
+= Where can I find all of the available icons? =
 
 Head over to [the Font Awesome website](https://fontawesome.com/icons "the Font Awesome website") to find a full list of icons available. The plugin works with all free icons.
 
-### How to I add an icon to my menu? 
+= How to I add an icon to my menu?  =
 
 Go to **Appearance** -> **Menus**. Use the **Screen** Options tab (upper right) and check the box for CSS Classes to make it available for all menu items. 
 
@@ -57,13 +51,13 @@ To add the [home icon](https://fontawesome.com/icons/home?style=solid) to your '
 
 Save your menu and enjoy the icons!
 
-### How do I use the shortcodes?
+= How do I use the shortcodes? =
 
-It took some digging to check that these work (the original plugin had no explanation of the stacking shortcode).
+Use `[fa class="fab fa-twitter"]` to create a twitter icon.
 
-Use `[fa class="fab fa-twitter"]` to create a twitter icon. Of course, if you are doing this, why not go to the HTMl editor and just enter `&lt;i class="fab fa-twitter"&gt;&lt;/i&gt;` but hey. 
+You can include the [size](https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons) and [rotation](https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons) classes as well. 
 
-You can include the [size](https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons) and [rotation](https://fontawesome.com/how-to-use/on-the-web/styling/rotating-icons) classes as well. Here I entered in my WordPress editor:
+Here it can entered the editor:
 
      I got my [fa class="fas fa-apple-alt fa-5x"] 
      and then I went [fa class="fab fa-twitter fa-rotate-270 fa-5x"]
@@ -83,18 +77,27 @@ which produces
 
 ![Example stack shortcode of red circle around a camera displayed](images/shortcode-stack.jpg "Example stack shortcode of red circle around a camera displayed")   
 
-YMMV
 
-## Updates
+== Screenshots ==
 
-* 5.2 - cleaned up documentation for hopeful submission to WordPress repo. Wish me luck.
-* 5.1 - added plugin links to settings, and renamed the menu name to not be confused with the official Font Awesome plugin
-* 5.01 - adjusted to fix `fa` shortcode and verify the `fa-stack` one works.
-* 5.0 - the very first attempt to get this to work, just tweaked the original plugin slightly.
-
-.
+1. Plugin Settings
 
 
+== Changelog ==
 
+= 5.2 =
+
+* Cleaned up documentation for hopeful submission to WordPress repo. Wish me luck.
+
+= 5.1 =
+
+* Added plugin links to settings
+* Renamed the menu name to not be confused with the official Font Awesome plugin
+
+= 5.01 =
+* Adjusted to fix `fa` shortcode and verify the `fa-stack` one works.
+
+= 5.0 =
+The very first attempt to get this to work, just tweaked the original plugin slightly. Keeping the versions to build off of the original.
 
 
