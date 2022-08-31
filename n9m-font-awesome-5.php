@@ -1,17 +1,15 @@
 <?php
 /*
-Plugin Name: Font Awesome 5 Menus
+Plugin Name: Iconic Awesome Fonts For Menus
 Plugin URI: https://github.com/cogdog/font-awesome-5-menus
-Description: Easily add Font Awesome 5.0 icons to your WordPress menus and anywhere else on your site! This is a tweak to original version 4.7.0 plugin by New Nine Media
-Version: 5.1
+Description: Easily add Font Awesome 5.0 icons to your WordPress menus and anywhere else on your site! This is an update to original version 4.7.0 plugin by New Nine Media. Apparently one cannpt use Font Awesome in the plugin name!
+Version: 5.3
 Author: CogDog
 Author URI: https://cog.dog/
 License: GPLv2 or later
 */
 
 /*
-    Copyright 2013-2016  NEW NINE MEDIA  (tel : +1-800-288-9699)
-
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
     published by the Free Software Foundation.
@@ -29,10 +27,10 @@ License: GPLv2 or later
 class FontAwesomeFive {
 
     public static $defaults = array(
-        'fa5_location' => 'https://use.fontawesome.com/releases/v5.11.2/css/all.css',
+        'fa5_location' => 'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
         'spacing' => 1,
         'stylesheet' => 'local',
-        'version' => '5.1'
+        'version' => '5.2'
     );
 
     function __construct(){
@@ -97,21 +95,21 @@ class FontAwesomeFive {
                     <h2><i class="fas fa-dog"></i> ' . get_admin_page_title() . ' by @cogdog</h2>
                     <form action="' . admin_url( 'options-general.php?page=n9m-font-awesome-5-menus' ) . '" method="post">
                         <h3>Font Awesome Stylesheet</h3>
-                        <p>Select how you want Font Awesome 5&#8217;s stylesheet loaded on your site (if at all):</p>
+                        <p>Select how you want Font Awesome\'s stylesheet loaded on your site (if at all) While this plugin includes Font Awesome 5, you can use a newer version with the custom location option below:</p>
                         <table class="form-table">
                             <tbody>
                                 <tr>
-                                    <th scope="row">Load Font Awesome 5 From:</th>
+                                    <th scope="row">Load Font Awesome From:</th>
                                     <td>
                                         <fieldset>
-                                            <legend class="screen-reader-text"><span>Load Font Awesome 5 From</span></legend>
-                                            <label for="n9m_location-local"><input type="radio" name="n9m_location" id="n9m_location-local" value="local"' . ( 'local' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Local plugin folder (default)</label>
+                                            <legend class="screen-reader-text"><span>Load Font Awesome From</span></legend>
+                                            <label for="n9m_location-local"><input type="radio" name="n9m_location" id="n9m_location-local" value="local"' . ( 'local' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Local plugin folder (default, version ' . self::$defaults[ 'version' ] . ')</label>
                                             <br />
                                             <label for="n9m_location-fa5"><input type="radio" name="n9m_location" id="n9m_location-fa5" value="fa5"' . ( 'fa5' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Official Font Awesome CDN <span class="description">(<a href="https://fontawesome.com" target="_blank">Font Awesome Itself</a>)</span></label>
                                             <br />
                                             <label for="n9m_location-other"><input type="radio" name="n9m_location" id="n9m_location-other" value="other"' . ( 'other' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> A custom location:</label> <input type="text" name="n9m_location-other-location" id="n9m_location-other-location" placeholder="Enter full url here" class="regular-text" value="' . ( isset( $settings[ 'stylesheet_location' ] ) ? $settings[ 'stylesheet_location' ] : '' ) . '">
                                             <br />
-                                            <label for="n9m_location-none"><input type="radio" name="n9m_location" id="n9m_location-none" value="none"' . ( 'none' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Don&#8217;t load Font Awesome 5&#8217;s stylesheet <span class="description">(use this if you load Font Awesome 5 elsewhere on your site)</span></label>
+                                            <label for="n9m_location-none"><input type="radio" name="n9m_location" id="n9m_location-none" value="none"' . ( 'none' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Don&#8217;t load Font Awesome 5&#8217;s stylesheet <span class="description">(use this if you load Font Awesome elsewhere on your site)</span></label>
                                         </fieldset>
                                     </td>
                                 </tr>

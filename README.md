@@ -1,4 +1,4 @@
-# Font Awesome 5 For Menus
+# Iconic Font Menus
 by Alan Levine https://cog.dog/
 
 -----
@@ -34,6 +34,12 @@ In addition, you can use shortcodes to add icons to your posts and pages, as wel
 Download this repository as a .zip file then upload it as a plugin in your WordPress dashboard. 
 
 Then, activate the plugin through the 'Plugins' menu in WordPress. Look for a menu item under the **Settings** menu.
+
+## Not Limited to Version 5
+
+My decision to name this plugin tied to version 5 was not the best choice, and credit to the original plugin for allowing a setting to load the Font Awesome from an external CDN. So you can use this plugin to allow Font Awesome 6 icons.
+
+In the plugin's Settings under **Load Font Awesome 5 From:** change the option from `Local plugin folder (default)` to  `A custom location:` and find the CDN hosted version you want from https://cdnjs.com/libraries/font-awesome -- in the case below, we are using All of the version 6.2 free icons `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css`
 
 ## Frequently Asked Questions
 
@@ -87,6 +93,7 @@ YMMV
 
 ## Updates
 
+* 5.3 - Settings page shows version installed local (5.12) and more details on how to user versions 6.x using the custom location. 
 * 5.2 - cleaned up documentation for hopeful submission to WordPress repo. Wish me luck.
 * 5.1 - added plugin links to settings, and renamed the menu name to not be confused with the official Font Awesome plugin
 * 5.01 - adjusted to fix `fa` shortcode and verify the `fa-stack` one works.

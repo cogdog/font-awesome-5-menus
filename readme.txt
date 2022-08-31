@@ -1,7 +1,7 @@
-=== Font Awesome 5 For Menus ===
+=== Iconic Font Menus ===
 Contributors: cogdog, new-nine
 Donate link: https://patreon.com/cogdog
-Tags: menu, icon, fontawesome
+Tags: menu, icon
 Requires at least: 4.0
 Tested up to: 5.3
 Stable tag: 4.3
