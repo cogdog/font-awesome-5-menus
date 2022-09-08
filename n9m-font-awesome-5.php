@@ -58,7 +58,7 @@ class FontAwesomeFive {
     }
 
     function admin_menu(){
-        add_submenu_page( 'options-general.php', 'Font Awesome 5 Menus', 'Font Awesome 5 Menus', 'edit_theme_options', 'n9m-font-awesome-5-menus', array( $this, 'admin_menu_cb' ) );
+        add_submenu_page( 'options-general.php', 'Font Awesome Menus', 'Font Awesome Menus', 'edit_theme_options', 'n9m-font-awesome-5-menus', array( $this, 'admin_menu_cb' ) );
     }
     
 	function fa5menu_settings_link( $links ) {
@@ -109,14 +109,14 @@ class FontAwesomeFive {
                                             <br />
                                             <label for="n9m_location-other"><input type="radio" name="n9m_location" id="n9m_location-other" value="other"' . ( 'other' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> A custom location:</label> <input type="text" name="n9m_location-other-location" id="n9m_location-other-location" placeholder="Enter full url here" class="regular-text" value="' . ( isset( $settings[ 'stylesheet_location' ] ) ? $settings[ 'stylesheet_location' ] : '' ) . '">
                                             <br />
-                                            <label for="n9m_location-none"><input type="radio" name="n9m_location" id="n9m_location-none" value="none"' . ( 'none' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Don&#8217;t load Font Awesome 5&#8217;s stylesheet <span class="description">(use this if you load Font Awesome elsewhere on your site)</span></label>
+                                            <label for="n9m_location-none"><input type="radio" name="n9m_location" id="n9m_location-none" value="none"' . ( 'none' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Don&#8217;t load Font Awesome&#8217;s stylesheet <span class="description">(use this if you load Font Awesome elsewhere on your site)</span></label>
                                         </fieldset>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <h3>Icon Spacing</h3>
-                        <p>By default, Font Awesome 5 Menus adds a space before or after the icon in your menu. Uncheck the box below to remove this space and give you finer control over your custom styling.</p>
+                        <p>By default, Font Awesome Menus adds a space before or after the icon in your menu. Uncheck the box below to remove this space and give you finer control over your custom styling.</p>
                         <p><label for="n9m_text_spacing"><input type="checkbox" name="n9m_text_spacing" id="n9m_text_spacing" value="1"' . ( 1 == $settings[ 'spacing' ] ? ' checked' : false ) . '> Keep the space between my text and my icons <span class="description">(default is checked)</span></label>
                         <p>' . wp_nonce_field( 'n9m-fa' ) . '<button type="submit" class="button button-primary">Save Settings</button></p>
                     </form>
