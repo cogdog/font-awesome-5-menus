@@ -3,7 +3,7 @@
 Plugin Name: Iconic Awesome Fonts For Menus
 Plugin URI: https://github.com/cogdog/font-awesome-5-menus
 Description: Easily add Font Awesome 5.0 icons to your WordPress menus and anywhere else on your site! This is an update to original version 4.7.0 plugin by New Nine Media. Apparently one cannpt use Font Awesome in the plugin name!
-Version: 5.3
+Version: 5.4
 Author: CogDog
 Author URI: https://cog.dog/
 License: GPLv2 or later
@@ -30,7 +30,7 @@ class FontAwesomeFive {
         'fa5_location' => 'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
         'spacing' => 1,
         'stylesheet' => 'local',
-        'version' => '5.2'
+        'version' => '5.4'
     );
 
     function __construct(){
@@ -107,7 +107,7 @@ class FontAwesomeFive {
                                             <br />
                                             <label for="n9m_location-fa5"><input type="radio" name="n9m_location" id="n9m_location-fa5" value="fa5"' . ( 'fa5' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Official Font Awesome CDN <span class="description">(<a href="https://fontawesome.com" target="_blank">Font Awesome Itself</a>)</span></label>
                                             <br />
-                                            <label for="n9m_location-other"><input type="radio" name="n9m_location" id="n9m_location-other" value="other"' . ( 'other' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> A custom location:</label> <input type="text" name="n9m_location-other-location" id="n9m_location-other-location" placeholder="Enter full url here" class="regular-text" value="' . ( isset( $settings[ 'stylesheet_location' ] ) ? $settings[ 'stylesheet_location' ] : '' ) . '">
+                                            <label for="n9m_location-other"><input type="radio" name="n9m_location" id="n9m_location-other" value="other"' . ( 'other' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> A custom location:</label> <input type="text" name="n9m_location-other-location" id="n9m_location-other-location" placeholder="Enter full url here" class="regular-text" value="' . ( isset( $settings[ 'stylesheet_location' ] ) ? esc_attr( $settings[ 'stylesheet_location' ] ) : '' ) . '">
                                             <br />
                                             <label for="n9m_location-none"><input type="radio" name="n9m_location" id="n9m_location-none" value="none"' . ( 'none' == $settings[ 'stylesheet' ] ? ' checked' : false ) . '> Don&#8217;t load Font Awesome&#8217;s stylesheet <span class="description">(use this if you load Font Awesome elsewhere on your site)</span></label>
                                         </fieldset>
@@ -156,7 +156,7 @@ class FontAwesomeFive {
             $before = false;
         }
 
-        $icon = '<span class="' . implode( ' ', $classes ) . '"></span>';
+        $icon = '<span class="' . esc_attr( implode( ' ', $classes ) ) . '"></span>';
 
         preg_match( '/(<a.+>)(.+)(<\/a>)/i', $item_output, $matches );
         if( 4 === count( $matches ) ){
@@ -208,7 +208,7 @@ class FontAwesomeFive {
         ), $atts );
         if( !empty( $a[ 'class' ] ) ){
             $class_array = explode( ' ', $a[ 'class' ] );
-            return '<i class="' . implode( ' ', $class_array ) . '"></i>';
+            return '<i class="' . esc_attr( implode( ' ', $class_array ) ) . '"></i>';
         }
     }
     
@@ -225,7 +225,7 @@ class FontAwesomeFive {
                 $class_array[] = 'fa-stack';
             }
         }
-        return '<span class="' . implode( ' ', $class_array ) . '">' . do_shortcode( $content ) . '</span>';
+        return '<span class="' . esc_attr( implode( ' ', $class_array ) ) . '">' . do_shortcode( $content ) . '</span>';
     }
     
     public static function write_log( $log ){
