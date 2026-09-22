@@ -2,8 +2,8 @@
 /*
 Plugin Name: Iconic Awesome Fonts For Menus
 Plugin URI: https://github.com/cogdog/font-awesome-5-menus
-Description: Easily add Font Awesome 5.0 icons to your WordPress menus and anywhere else on your site! This is an update to original version 4.7.0 plugin by New Nine Media. Apparently one cannpt use Font Awesome in the plugin name!
-Version: 5.3
+Description: Easily add Font Awesome 6.7.2 icons to your WordPress menus and anywhere else on your site! This is an update to original version 4.7.0 plugin by New Nine Media. Apparently one cannpt use Font Awesome in the plugin name!
+Version: 6.72
 Author: CogDog
 Author URI: https://cog.dog/
 License: GPLv2 or later
@@ -27,10 +27,10 @@ License: GPLv2 or later
 class FontAwesomeFive {
 
     public static $defaults = array(
-        'fa5_location' => 'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
+        'fa5_location' => 'https://use.fontawesome.com/releases/v6.7.2/css/all.css',
         'spacing' => 1,
         'stylesheet' => 'local',
-        'version' => '5.2'
+        'version' => '6.7.2'
     );
 
     function __construct(){
@@ -95,7 +95,7 @@ class FontAwesomeFive {
                     <h2><i class="fas fa-dog"></i> ' . get_admin_page_title() . ' by @cogdog</h2>
                     <form action="' . admin_url( 'options-general.php?page=n9m-font-awesome-5-menus' ) . '" method="post">
                         <h3>Font Awesome Stylesheet</h3>
-                        <p>Select how you want Font Awesome\'s stylesheet loaded on your site (if at all) While this plugin includes Font Awesome 5, you can use a newer version with the custom location option below:</p>
+                        <p>Select how you want Font Awesome\'s stylesheet loaded on your site (if at all) While this plugin includes Font Awesome 6.7.2, you can use a newer version with the custom location option below:</p>
                         <table class="form-table">
                             <tbody>
                                 <tr>

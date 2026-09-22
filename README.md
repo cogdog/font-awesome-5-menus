@@ -1,31 +1,26 @@
-# Iconic Font Menus
+# Iconic Awesome Font Menus
 by Alan Levine https://cog.dog/
-
------
-*If this kind of stuff has any value to you, please consider supporting me so I can do more!*
-
-[![Support me on Patreon](http://cogdog.github.io/images/badge-patreon.png)](https://patreon.com/cogdog) [![Support me on via PayPal](http://cogdog.github.io/images/badge-paypal.png)](https://paypal.me/cogdog)
 
 ----- 
 
-A slight tweak to the [Font Awesome 4 Menus plugin](https://wordpress.org/plugins/font-awesome-4-menus/) updated to work with Font Awesome 5 used in my [Calling Card WordPress themes](https://cogdog.github.io/#wpcards).
+A slight tweak to the [Font Awesome 4 Menus plugin](https://wordpress.org/plugins/font-awesome-4-menus/) updated to work with Font Awesome used in my [Calling Card WordPress themes](https://cogdog.github.io/#wpcards).
 
 Below are some mods of the original plugin readme.
 
 See it in action:
 
-* http://lab.cogdogblog.com/dimension/
+* https://lab.cogdogblog.com/dimension/
 * https://cog.dog
 
 ## Description
 
 This is an update to the [Font Awesome 4 Menus plugin by New Nine Media](https://wordpress.org/plugins/font-awesome-4-menus/) updated to work with Font Awesome 5 (their plugin has not been updated).
 
-The settings allow you to use the Font Awesome 5 fonts included in the plugin, or to specify a URL to a CDN hosted one, or to skip using if one is enabled by another plugin or theme.
+The settings allow you to use the Font Awesome fonts included in the plugin (6.7.2 is default), or to specify a URL to a CDN hosted one, or to skip using if one is enabled by another plugin or theme.
 
 With this plugin, just add the full Font Awesome classes, e.g. `fab fa-(icon name)`  as a class/classes to your menu and the plugin will pull that out, put the icon before or after your link text, and wrap your link text in a span so you can show or hide it as you see fit.
 
-In Font Awesome 5 Menus, you also have ability to add multiple Font Awesome classes for multiple effects. 
+In Iconic Awesome Font Menus, you also have ability to add multiple Font Awesome classes for multiple effects. 
 
 In addition, you can use shortcodes to add icons to your posts and pages, as well as shortcodes to take advantage of the new stacked feature of Font Awesome 5.
 
@@ -35,11 +30,13 @@ Download this repository as a .zip file then upload it as a plugin in your WordP
 
 Then, activate the plugin through the 'Plugins' menu in WordPress. Look for a menu item under the **Settings** menu.
 
-## Not Limited to Version 5
+## Not Limited to Versions
 
-My decision to name this plugin tied to version 5 was not the best choice, and credit to the original plugin for allowing a setting to load the Font Awesome from an external CDN. So you can use this plugin to allow Font Awesome 6 icons.
+My decision to name this plugin tied to version 5 was not the best choice, and credit to the original plugin for allowing a setting to load the Font Awesome from an external CDN. So you can use this plugin to allow Font Awesome  icons from later version.
 
-In the plugin's Settings under **Load Font Awesome 5 From:** change the option from `Local plugin folder (default)` to  `A custom location:` and find the CDN hosted version you want from https://cdnjs.com/libraries/font-awesome -- in the case below, we are using All of the version 6.2 free icons `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css`
+The current defaults are set to use Font Awesome 6.7.2
+
+In the plugin's Settings under **Load Font Awesome 5 From:** change the option from `Local plugin folder (default)` to  `A custom location:` and find the CDN hosted version you want from https://cdnjs.com/libraries/font-awesome 
 
 ## Frequently Asked Questions
 
@@ -93,6 +90,7 @@ YMMV
 
 ## Updates
 
+* 6.7.2 - default version is now 6.7.2
 * 5.3 - Settings page shows version installed local (5.12) and more details on how to user versions 6.x using the custom location. 
 * 5.2 - cleaned up documentation for hopeful submission to WordPress repo. Wish me luck.
 * 5.1 - added plugin links to settings, and renamed the menu name to not be confused with the official Font Awesome plugin
